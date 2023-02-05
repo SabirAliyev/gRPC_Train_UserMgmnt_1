@@ -14,7 +14,8 @@ const (
 )
 
 func main() {
-	// Create Dial connection to gRPC server. The WithBlock() option means that this function will not return until the connection is made.
+	// Create Dial connection to gRPC server.
+	// The WithBlock() option means that this function will not return until the connection is made.
 	// So it`s blocking the dial.
 	conn, err := grpc.Dial(address, grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
